@@ -5,7 +5,7 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "start": "yarn && yarn postinstall && react-native start",
+    "start": "yarn && react-native start",
     "dev": "yarn start",
     "test": "jest",
     "lint": "eslint .",
@@ -14,12 +14,24 @@
     "g:a": "yarn generate:debug:apk && mv android/app/build/outputs/apk/debug/app-debug.apk .",
     "stage:start": "pm2 start stage-server-pm2.json",
     "stage:stop": "pm2 delete stage-server-pm2.json",
-    "postinstall": "patch-package",
     "release:ios:beta": "yarn && cd ios/ && pod install && fastlane beta"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.15.17",
+    "@react-navigation/native": "^6.0.8",
+    "@react-navigation/native-stack": "^6.5.0",
+    "axios": "^0.25.0",
+    "formik": "^2.2.9",
+    "jwt-decode": "^3.1.2",
     "react": "17.0.2",
-    "react-native": "0.66.3"
+    "react-native": "0.66.3",
+    "react-native-dotenv": "^3.3.1",
+    "react-native-safe-area-context": "^3.3.2",
+    "react-native-screens": "^3.10.2",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2",
+    "redux-thunk": "^2.4.1",
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
