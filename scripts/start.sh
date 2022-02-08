@@ -1,11 +1,11 @@
-cd /home/ubuntu/altvest-app
+cd /home/ubuntu/reminder-app
 
-current_env=`cat /etc/altvest/env`
-current_config=`cat /etc/altvest/bucket`
+current_env=`cat /etc/reminder/env`
+current_config=`cat /etc/reminder/bucket`
 
-aws s3 cp s3://$current_config/$current_env/$current_env.altvest-app.env .env
+aws s3 cp s3://$current_config/$current_env/$current_env.reminder-app.env .env
 
-echo "Starting Altvest App - Stage Server"
+echo "Starting Reminder App - Stage Server"
 
 yarn 
 

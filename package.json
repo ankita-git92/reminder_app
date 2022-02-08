@@ -12,8 +12,6 @@
     "generate:debug:apk": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/ && cd android && ./gradlew assembleDebug",
     "g:d:a": "yarn generate:debug:apk",
     "g:a": "yarn generate:debug:apk && mv android/app/build/outputs/apk/debug/app-debug.apk .",
-    "stage:start": "pm2 start stage-server-pm2.json",
-    "stage:stop": "pm2 delete stage-server-pm2.json",
     "release:ios:beta": "yarn && cd ios/ && pod install && fastlane beta"
   },
   "dependencies": {

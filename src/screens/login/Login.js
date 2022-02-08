@@ -55,11 +55,11 @@ const Login = ({ navigation }) => {
                         uri: `${S3_URL}/logo.png`,
                       }}
                     />
-                    <LogoText>altvest</LogoText>
+                    <LogoText>reminder</LogoText>
                   </LogoView>
                   <View>
                     <HelloText>Hello Again!</HelloText>
-                    <SigninText>Sign In to Altvest</SigninText>
+                    <SigninText>Sign In to Reminder</SigninText>
                     <DetailsText>Enter Your Details Below</DetailsText>
                   </View>
                   {/* <ButtonContainer>

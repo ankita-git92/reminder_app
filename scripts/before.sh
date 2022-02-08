@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# check if altvest-app folder exits
-if [ ! -d /home/ubuntu/altvest-app ]; then
-    mkdir -vp /home/ubuntu/altvest-app
+# check if reminder-app folder exits
+if [ ! -d /home/ubuntu/reminder-app ]; then
+    mkdir -vp /home/ubuntu/reminder-app
 fi
