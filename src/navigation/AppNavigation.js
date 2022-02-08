@@ -3,13 +3,15 @@ import { useSelector } from 'react-redux';
 import { NavigationContainer } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useDispatch } from 'react-redux';
-// import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import LoginNavigation from './LoginNavigation';
 import SplashNavigation from './SplashNavigation';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { Colors } from '../constants/Theme';
+import ReminderNavigation from './ReminderNavigation';
 
-// const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
 
 const AppNavigator = props => {
   const isLoading = useSelector(state => state.auth.isLoading);
@@ -42,11 +44,23 @@ const AppNavigator = props => {
         {isLoading ? (
           // We haven't finished checking for the token yet
           <SplashNavigation />
+        ) : userToken !== null ? (
+          // No token found, user isn't signed in
+          <LoginNavigation />
         ) : (
-          userToken === null && (
-            // No token found, user isn't signed in
-            <LoginNavigation />
-          )
+          <Stack.Navigator
+            screenOptions={{
+              headerTintColor: Colors.primaryColor,
+            }}
+          >
+            <Stack.Group>
+              <Stack.Screen
+                name="ReminderDashboard"
+                component={ReminderNavigation}
+                options={{ headerShown: false }}
+              />
+            </Stack.Group>
+          </Stack.Navigator>
         )}
       </NavigationContainer>
     </SafeAreaProvider>

@@ -1,7 +1,7 @@
 export default {
   black: '#000000',
   white: '#ffffff',
-  primaryColor: '#01BEA0',
+  primaryColor: '#337ACD',
   inputBorderColor: '#c4cdd5',
   googleIconColor: '#4285F4',
   facebookIconColor: '#4285F4',
