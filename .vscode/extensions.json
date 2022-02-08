@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "vinicioslc.adb-interface-vscode",
+    "dbaeumer.vscode-eslint",
+    "ms-vscode.vscode-typescript-next",
+    "esbenp.prettier-vscode",
+    "msjsdiag.vscode-react-native",
+    "visualstudioexptteam.vscodeintellicode",
+    "styled-components.vscode-styled-components"
+  ]
+}

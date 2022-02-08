@@ -1,0 +1,6 @@
+{
+    "files.eol": "\n",
+    "editor.formatOnSave": true,
+    "prettier.requireConfig": true,
+    "eslint.format.enable": false,
+}

@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "altvest-app",
+            "script": "react-native",
+            "args": "start"
+        }
+    ]
+}
