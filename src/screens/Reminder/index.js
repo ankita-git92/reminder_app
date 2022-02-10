@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, useWindowDimensions, StyleSheet } from 'react-native';
+import { Text, useWindowDimensions, StyleSheet } from 'react-native';
 import { TabView, TabBar } from 'react-native-tab-view';
 import { Colors } from '../../constants/Theme';
 import Upcoming from './Upcoming';
@@ -29,7 +29,7 @@ const Reminder = ({ navigation }) => {
         <Text
           style={
             ({
-              color: focused ? Colors.black : Colors.grayColor3,
+              color: focused ? Colors.primaryColor : Colors.grayColor3,
             },
             styles.tabBarText)
           }
